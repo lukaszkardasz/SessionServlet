@@ -46,7 +46,7 @@ public class SessionServlet extends HttpServlet {
         } else {
             writer.println("<div>Witaj nieznajomy!</div>");
         }
-        writer.println("  </body>");
+        writer.println("</body>");
         writer.println("</html>");
     }
 }
