@@ -17,6 +17,7 @@ import java.io.PrintWriter;
 public class SessionServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
+        session.setMaxInactiveInterval(20);
         User user = (User) session.getAttribute("user");
         if (user == null){
             user = createUser(request);
